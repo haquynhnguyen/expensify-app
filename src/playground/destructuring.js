@@ -1,3 +1,8 @@
+//
+// Object destructuring
+//
+
+
 // const person = {
 //   name: 'Quynh',
 //   age: 26,
@@ -15,14 +20,28 @@
 //   console.log(`It is ${temperature} in ${city}`);
 // } 
 
-const book = {
-  title: 'How we die',
-  author: 'Some One',
-  publisher: {
-    name: 'NXB - TUOI TRE'
-  }
-}
+// const book = {
+//   title: 'How we die',
+//   author: 'Some One',
+//   publisher: {
+//     name: 'NXB - TUOI TRE'
+//   }
+// }
 
-const { name: publisherName = 'Self - published' } = book.publisher;
+// const { name: publisherName = 'Self - published' } = book.publisher;
 
-console.log(publisherName);
+// console.log(publisherName);
+
+//
+// Array destructuring
+//
+
+const address = ['1299 S Juniper Street', 'HCM', 'Vietnam', '70000'];
+
+const [street, city, country='No where', zip] = address;
+
+console.log(`You are in ${city} ${country}`);
+
+const item = ['Coffee (hot)', '$2.00', '$2.50', '$2.75'];
+const [coffe, small, mediumPrize, large] = item;
+console.log(`A medium ${coffe} costs ${mediumPrize}`);
